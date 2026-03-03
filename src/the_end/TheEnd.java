@@ -4,7 +4,7 @@ public class TheEnd {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		int h = 7; // height
+		int h = 7; // height of each letter
 		int w = 5; // width of each letter
 
 		for (int i = 1; i <= h; i++) {
@@ -74,8 +74,22 @@ public class TheEnd {
 
 			System.out.println();
 		}
-		System.out.println("\n\n\n\t\t\t\t\t\t\t  ");
-		
-//						heart shape
+		System.out.println("\n\n\n");
+
+//			   ===== heart shape =====
+		for (int i = 1; i <= 10; i++) {
+			System.out.print("\t\t\t\t\t\t\t");
+			for (int j = 1; j <= 11; j++) {
+				if (i == 1 && ((j >= 3 && j <= 4) || (j >= 8 && j <= 9)) || i == 2 && j != 1 && j != 6 && j != 11
+						|| i == 3 || i == 4 || i == 5 || i == 6 && j >= 2 && j <= 10 || i == 7 && j >= 3 && j <= 9
+						|| i == 8 && j >= 4 && j <= 8 || i == 9 && j >= 5 && j <= 7 || i == 10 && j == 6) {
+					System.out.print("* ");
+//				Thread.sleep(800);
+				} else
+					System.out.print("  ");
+			}
+
+			System.out.println();
+		}
 	}
 }
